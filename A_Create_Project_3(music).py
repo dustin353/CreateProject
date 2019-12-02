@@ -140,7 +140,7 @@ def ConnectFour():
         pygame.display.flip()      # flip the screen like in a flipbook
         pressedkeys = pygame.key.get_pressed()
         #if pressedkeys[pygame.K_o]:
-        #oof.play()
+            #oof.play()
         if pressedkeys[pygame.K_m]:
             if unpress >= 500:
                 unpress = 0
@@ -230,6 +230,7 @@ def ConnectFour():
                                 mytext = mytext.convert_alpha()
                                 return mytext
                             textsurface = write("Red Wins!")
+                            oof.play()
                             screen.blit(textsurface, (140,50))
                         elif c1 == 255:
                             print('Black Wins')
